@@ -164,24 +164,6 @@ F 3 "" H 1950 2100 50  0000 C CNN
 	1    1950 2100
 	1    0    0    -1  
 $EndComp
-Text GLabel 5500 2700 0    60   Input ~ 0
-GIPO1
-Text GLabel 5500 2500 0    60   Input ~ 0
-GIPO3
-Text GLabel 6400 2400 2    60   Input ~ 0
-GIPO15
-Text GLabel 6400 2600 2    60   Input ~ 0
-GIPO13
-Text GLabel 6400 2700 2    60   Input ~ 0
-GIPO12
-Text GLabel 6400 2500 2    60   Input ~ 0
-GIPO14
-Text GLabel 5500 2600 0    60   Input ~ 0
-GIPO2
-Text GLabel 5500 2400 0    60   Input ~ 0
-GIPO4
-Text GLabel 6400 2800 2    60   Input ~ 0
-GIPO5
 $Comp
 L LED D3
 U 1 1 570F8E13
@@ -281,14 +263,6 @@ F 3 "" H 9250 2300 50  0000 C CNN
 	1    9250 2300
 	1    0    0    -1  
 $EndComp
-Text GLabel 8550 2300 0    60   Input ~ 0
-GIPO15
-Text GLabel 8550 2600 0    60   Input ~ 0
-GIPO14
-Text GLabel 8550 2900 0    60   Input ~ 0
-GIPO13
-Text GLabel 8550 3200 0    60   Input ~ 0
-GIPO12
 $Comp
 L SW_PUSH SW1
 U 1 1 570F9210
@@ -311,126 +285,118 @@ F 3 "" H 3550 3050 50  0000 C CNN
 	1    3550 3050
 	1    0    0    -1  
 $EndComp
-Text GLabel 3850 2200 2    60   Input ~ 0
-GIPO5
-Text GLabel 3850 3050 2    60   Input ~ 0
-GIPO4
 $Comp
 L CONN_01X15 P2
 U 1 1 570F9B9A
-P 5700 4750
-F 0 "P2" H 5700 5550 50  0000 C CNN
-F 1 "CONN_01X15" V 5800 4750 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x15" H 5700 4750 50  0001 C CNN
-F 3 "" H 5700 4750 50  0000 C CNN
-	1    5700 4750
-	1    0    0    -1  
+P 5700 4200
+F 0 "P2" H 5700 5000 50  0000 C CNN
+F 1 "CONN_01X15" V 5800 4200 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x15" H 5700 4200 50  0001 C CNN
+F 3 "" H 5700 4200 50  0000 C CNN
+	1    5700 4200
+	1    0    0    1   
 $EndComp
 $Comp
 L CONN_01X15 P3
 U 1 1 570F9E13
-P 6200 4750
-F 0 "P3" H 6200 5550 50  0000 C CNN
-F 1 "CONN_01X15" V 6300 4750 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x15" H 6200 4750 50  0001 C CNN
-F 3 "" H 6200 4750 50  0000 C CNN
-	1    6200 4750
+P 6200 4200
+F 0 "P3" H 6200 5000 50  0000 C CNN
+F 1 "CONN_01X15" V 6300 4200 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x15" H 6200 4200 50  0001 C CNN
+F 3 "" H 6200 4200 50  0000 C CNN
+	1    6200 4200
 	-1   0    0    1   
 $EndComp
 $Comp
 L GND #PWR09
 U 1 1 570F9FDE
-P 6950 5350
-F 0 "#PWR09" H 6950 5100 50  0001 C CNN
-F 1 "GND" H 6950 5200 50  0000 C CNN
-F 2 "" H 6950 5350 50  0000 C CNN
-F 3 "" H 6950 5350 50  0000 C CNN
-	1    6950 5350
+P 6950 4800
+F 0 "#PWR09" H 6950 4550 50  0001 C CNN
+F 1 "GND" H 6950 4650 50  0000 C CNN
+F 2 "" H 6950 4800 50  0000 C CNN
+F 3 "" H 6950 4800 50  0000 C CNN
+	1    6950 4800
 	1    0    0    -1  
 $EndComp
-Text GLabel 6400 5450 2    60   Input ~ 0
+Text GLabel 6400 4900 2    60   Input ~ 0
 3V3
-Text GLabel 5500 5050 0    60   Input ~ 0
-3V3
-Text GLabel 6400 4550 2    60   Input ~ 0
+Text GLabel 5500 4500 0    60   Input ~ 0
 3V3
 $Comp
 L GND #PWR010
 U 1 1 570FA0BF
-P 6950 4650
-F 0 "#PWR010" H 6950 4400 50  0001 C CNN
-F 1 "GND" H 6950 4500 50  0000 C CNN
-F 2 "" H 6950 4650 50  0000 C CNN
-F 3 "" H 6950 4650 50  0000 C CNN
-	1    6950 4650
+P 6950 4100
+F 0 "#PWR010" H 6950 3850 50  0001 C CNN
+F 1 "GND" H 6950 3950 50  0000 C CNN
+F 2 "" H 6950 4100 50  0000 C CNN
+F 3 "" H 6950 4100 50  0000 C CNN
+	1    6950 4100
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR011
 U 1 1 570FA103
-P 5150 5350
-F 0 "#PWR011" H 5150 5100 50  0001 C CNN
-F 1 "GND" H 5150 5200 50  0000 C CNN
-F 2 "" H 5150 5350 50  0000 C CNN
-F 3 "" H 5150 5350 50  0000 C CNN
-	1    5150 5350
+P 5150 4800
+F 0 "#PWR011" H 5150 4550 50  0001 C CNN
+F 1 "GND" H 5150 4650 50  0000 C CNN
+F 2 "" H 5150 4800 50  0000 C CNN
+F 3 "" H 5150 4800 50  0000 C CNN
+	1    5150 4800
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR012
 U 1 1 570FA147
-P 5150 4950
-F 0 "#PWR012" H 5150 4700 50  0001 C CNN
-F 1 "GND" H 5150 4800 50  0000 C CNN
-F 2 "" H 5150 4950 50  0000 C CNN
-F 3 "" H 5150 4950 50  0000 C CNN
-	1    5150 4950
+P 5150 4400
+F 0 "#PWR012" H 5150 4150 50  0001 C CNN
+F 1 "GND" H 5150 4250 50  0000 C CNN
+F 2 "" H 5150 4400 50  0000 C CNN
+F 3 "" H 5150 4400 50  0000 C CNN
+	1    5150 4400
 	1    0    0    -1  
 $EndComp
-Text GLabel 5500 4050 0    60   Input ~ 0
+Text GLabel 5500 3500 0    60   Input ~ 0
 A0
-Text GLabel 5500 2800 0    60   Input ~ 0
+Text GLabel 5500 2400 0    60   Input ~ 0
 A0
-Text GLabel 6400 5250 2    60   Input ~ 0
-GPIO1
-Text GLabel 6400 4350 2    60   Input ~ 0
-GIPO0
-Text GLabel 6400 5150 2    60   Input ~ 0
-GIPO3
-Text GLabel 6400 5050 2    60   Input ~ 0
-GIPO15
-Text GLabel 6400 4950 2    60   Input ~ 0
-GIPO13
-Text GLabel 6400 4850 2    60   Input ~ 0
-GIPO12
-Text GLabel 6400 4450 2    60   Input ~ 0
-GIPO2
-Text GLabel 6400 4250 2    60   Input ~ 0
-GIPO4
-Text GLabel 6400 4150 2    60   Input ~ 0
-GIPO5
+Text GLabel 6400 4700 2    60   Input ~ 0
+D10
+Text GLabel 6400 3800 2    60   Input ~ 0
+D3
+Text GLabel 6400 4600 2    60   Input ~ 0
+D9
+Text GLabel 6400 4500 2    60   Input ~ 0
+D8
+Text GLabel 6400 4400 2    60   Input ~ 0
+D7
+Text GLabel 6400 4300 2    60   Input ~ 0
+D6
+Text GLabel 6400 3900 2    60   Input ~ 0
+D4
+Text GLabel 6400 3700 2    60   Input ~ 0
+D2
+Text GLabel 6400 3600 2    60   Input ~ 0
+D1
 Wire Wire Line
-	6400 5350 6950 5350
+	6400 4800 6950 4800
 Wire Wire Line
-	6400 4650 6950 4650
-Text GLabel 6400 4750 2    60   Input ~ 0
-GIPO14
-NoConn ~ 6400 4050
-NoConn ~ 5500 4150
-NoConn ~ 5500 4250
-NoConn ~ 5500 4350
-NoConn ~ 5500 4450
-NoConn ~ 5500 4550
-NoConn ~ 5500 4650
-NoConn ~ 5500 4750
-NoConn ~ 5500 4850
-NoConn ~ 5500 5150
-NoConn ~ 5500 5250
-NoConn ~ 5500 5450
+	6400 4100 6950 4100
+NoConn ~ 6400 3500
+NoConn ~ 5500 3600
+NoConn ~ 5500 3700
+NoConn ~ 5500 3800
+NoConn ~ 5500 3900
+NoConn ~ 5500 4000
+NoConn ~ 5500 4100
+NoConn ~ 5500 4200
+NoConn ~ 5500 4300
+NoConn ~ 5500 4600
+NoConn ~ 5500 4700
+NoConn ~ 5500 4900
 Wire Wire Line
-	5150 4950 5500 4950
+	5150 4400 5500 4400
 Wire Wire Line
-	5150 5350 5500 5350
+	5150 4800 5500 4800
 $Comp
 L R R1
 U 1 1 570FAF94
@@ -527,4 +493,36 @@ F 3 "" H 5500 2900 50  0000 C CNN
 	1    5500 2900
 	1    0    0    -1  
 $EndComp
+Text GLabel 6400 2800 2    60   Input ~ 0
+D10
+Text GLabel 6400 2700 2    60   Input ~ 0
+D9
+Text GLabel 6400 2600 2    60   Input ~ 0
+D8
+Text GLabel 6400 2500 2    60   Input ~ 0
+D7
+Text GLabel 6400 2400 2    60   Input ~ 0
+D6
+Text GLabel 5500 2500 0    60   Input ~ 0
+D1
+Text GLabel 5500 2600 0    60   Input ~ 0
+D2
+Text GLabel 5500 2700 0    60   Input ~ 0
+D3
+Text GLabel 5500 2800 0    60   Input ~ 0
+D4
+NoConn ~ 6400 4200
+Text GLabel 8550 3200 0    60   Input ~ 0
+D10
+Text GLabel 8550 2900 0    60   Input ~ 0
+D9
+Text GLabel 8550 2600 0    60   Input ~ 0
+D8
+Text GLabel 8550 2300 0    60   Input ~ 0
+D7
+Text GLabel 3850 2200 2    60   Input ~ 0
+D1
+Text GLabel 3850 3050 2    60   Input ~ 0
+D2
+NoConn ~ 6400 4000
 $EndSCHEMATC
