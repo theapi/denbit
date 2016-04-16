@@ -68,12 +68,12 @@ $EndComp
 $Comp
 L R R4
 U 1 1 570F67D8
-P 8700 3200
-F 0 "R4" V 8780 3200 50  0000 C CNN
-F 1 "220R" V 8700 3200 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8630 3200 50  0001 C CNN
-F 3 "" H 8700 3200 50  0000 C CNN
-	1    8700 3200
+P 8300 3200
+F 0 "R4" V 8380 3200 50  0000 C CNN
+F 1 "150R" V 8300 3200 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8230 3200 50  0001 C CNN
+F 3 "" H 8300 3200 50  0000 C CNN
+	1    8300 3200
 	0    1    1    0   
 $EndComp
 $Comp
@@ -167,23 +167,23 @@ $EndComp
 $Comp
 L R R6
 U 1 1 570F8E19
-P 8650 4150
-F 0 "R6" V 8730 4150 50  0000 C CNN
-F 1 "220R" V 8650 4150 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8580 4150 50  0001 C CNN
-F 3 "" H 8650 4150 50  0000 C CNN
-	1    8650 4150
+P 8200 4150
+F 0 "R6" V 8280 4150 50  0000 C CNN
+F 1 "150R" V 8200 4150 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8130 4150 50  0001 C CNN
+F 3 "" H 8200 4150 50  0000 C CNN
+	1    8200 4150
 	0    1    1    0   
 $EndComp
 $Comp
 L R R5
 U 1 1 570F8EB7
-P 8650 3750
-F 0 "R5" V 8730 3750 50  0000 C CNN
-F 1 "220R" V 8650 3750 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8580 3750 50  0001 C CNN
-F 3 "" H 8650 3750 50  0000 C CNN
-	1    8650 3750
+P 8200 3750
+F 0 "R5" V 8280 3750 50  0000 C CNN
+F 1 "100R" V 8200 3750 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8130 3750 50  0001 C CNN
+F 3 "" H 8200 3750 50  0000 C CNN
+	1    8200 3750
 	0    1    1    0   
 $EndComp
 $Comp
@@ -200,12 +200,12 @@ $EndComp
 $Comp
 L R R3
 U 1 1 570F8EC3
-P 8700 2750
-F 0 "R3" V 8780 2750 50  0000 C CNN
-F 1 "220R" V 8700 2750 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8630 2750 50  0001 C CNN
-F 3 "" H 8700 2750 50  0000 C CNN
-	1    8700 2750
+P 8300 2750
+F 0 "R3" V 8380 2750 50  0000 C CNN
+F 1 "150R" V 8300 2750 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8230 2750 50  0001 C CNN
+F 3 "" H 8300 2750 50  0000 C CNN
+	1    8300 2750
 	0    1    1    0   
 $EndComp
 $Comp
@@ -475,13 +475,13 @@ D3
 Text GLabel 5500 2600 0    60   Input ~ 0
 D4
 NoConn ~ 6400 4200
-Text GLabel 8500 3950 0    60   Input ~ 0
+Text GLabel 8050 3950 0    60   Input ~ 0
 D10
-Text GLabel 8500 3750 0    60   Input ~ 0
+Text GLabel 8050 3750 0    60   Input ~ 0
 D9
-Text GLabel 8500 4150 0    60   Input ~ 0
+Text GLabel 8050 4150 0    60   Input ~ 0
 D8
-Text GLabel 8550 2750 0    60   Input ~ 0
+Text GLabel 8150 2750 0    60   Input ~ 0
 D7
 Text GLabel 3850 2200 2    60   Input ~ 0
 D1
@@ -498,17 +498,17 @@ F 3 "" H 9100 3900 50  0000 C CNN
 	1    9100 3950
 	-1   0    0    1   
 $EndComp
-Text GLabel 8550 3200 0    60   Input ~ 0
+Text GLabel 8150 3200 0    60   Input ~ 0
 D6
 $Comp
 L R R7
 U 1 1 57115CAD
-P 8650 3950
-F 0 "R7" V 8730 3950 50  0000 C CNN
-F 1 "220R" V 8650 3950 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8580 3950 50  0001 C CNN
-F 3 "" H 8650 3950 50  0000 C CNN
-	1    8650 3950
+P 8200 3950
+F 0 "R7" V 8280 3950 50  0000 C CNN
+F 1 "100R" V 8200 3950 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8130 3950 50  0001 C CNN
+F 3 "" H 8200 3950 50  0000 C CNN
+	1    8200 3950
 	0    1    1    0   
 $EndComp
 Text GLabel 6400 4000 2    60   Input ~ 0
@@ -517,4 +517,24 @@ Text GLabel 5500 2700 0    60   Input ~ 0
 D5
 Text GLabel 5500 2800 0    60   Input ~ 0
 3V3
+Wire Wire Line
+	8350 3750 8800 3750
+Wire Wire Line
+	8350 3950 8800 3950
+Wire Wire Line
+	8350 4150 8800 4150
+Text Label 8400 4150 0    60   ~ 0
+RGB_RED
+Text Label 8400 3750 0    60   ~ 0
+RGB_GREEN
+Text Label 8400 3950 0    60   ~ 0
+RGB_BLUE
+Wire Wire Line
+	8450 2750 8850 2750
+Wire Wire Line
+	8450 3200 8850 3200
+Text Label 8500 2750 0    60   ~ 0
+S_GREEN
+Text Label 8500 3200 0    60   ~ 0
+S_RED
 $EndSCHEMATC
