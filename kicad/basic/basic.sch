@@ -323,23 +323,17 @@ F 3 "" H 5150 4400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 5500 3500 0    60   Input ~ 0
-A0
+ADC0
 Text GLabel 5500 2400 0    60   Input ~ 0
-A0
-Text GLabel 6400 3800 2    60   Input ~ 0
-D3
+ADC0
 Text GLabel 6400 4500 2    60   Input ~ 0
-D8
+GPIO15
 Text GLabel 6400 4400 2    60   Input ~ 0
-D7
+GPIO13
 Text GLabel 6400 4300 2    60   Input ~ 0
-D6
+GPIO12
 Text GLabel 6400 3900 2    60   Input ~ 0
-D4
-Text GLabel 6400 3700 2    60   Input ~ 0
-D2
-Text GLabel 6400 3600 2    60   Input ~ 0
-D1
+GPIO2
 Wire Wire Line
 	6400 4800 6950 4800
 Wire Wire Line
@@ -455,28 +449,28 @@ F 3 "" H 5500 2900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 6400 2700 2    60   Input ~ 0
-D8
+GPIO15
 Text GLabel 6400 2600 2    60   Input ~ 0
-D7
+GPIO13
 Text GLabel 6400 2400 2    60   Input ~ 0
-D5
+GPIO14
 Text GLabel 5500 2600 0    60   Input ~ 0
-D3
+GPIO4
 Text GLabel 5500 2700 0    60   Input ~ 0
-D4
+GPIO5
 NoConn ~ 6400 4200
 Text GLabel 8050 3750 0    60   Input ~ 0
-SD3
+GPIO10
 Text GLabel 8050 3950 0    60   Input ~ 0
-D5
+GPIO14
 Text GLabel 8050 4150 0    60   Input ~ 0
-D8
+GPIO15
 Text GLabel 8150 2750 0    60   Input ~ 0
-D7
+GPIO13
 Text GLabel 3850 2200 2    60   Input ~ 0
-D1
+GPIO0
 Text GLabel 3850 3050 2    60   Input ~ 0
-D2
+GPIO2
 $Comp
 L LED_RCBG D2
 U 1 1 571157B6
@@ -489,7 +483,7 @@ F 3 "" H 9100 3900 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Text GLabel 8150 3200 0    60   Input ~ 0
-D6
+GPIO12
 $Comp
 L R R7
 U 1 1 57115CAD
@@ -502,9 +496,9 @@ F 3 "" H 8200 3950 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 Text GLabel 6400 4000 2    60   Input ~ 0
-D5
+GPIO14
 Text GLabel 5500 2500 0    60   Input ~ 0
-D0
+GPIO2
 Text GLabel 5500 2800 0    60   Input ~ 0
 3V3
 Wire Wire Line
@@ -528,11 +522,31 @@ S_GREEN
 Text Label 8500 3200 0    60   ~ 0
 S_RED
 Text GLabel 6400 2500 2    60   Input ~ 0
-D6
+GPIO12
 Text GLabel 5500 3800 0    60   Input ~ 0
-SD3
+GPIO10
 Text GLabel 6400 3500 2    60   Input ~ 0
-D0
+GPIO16
 Text GLabel 6400 2800 2    60   Input ~ 0
 3V3
+Text Notes 6800 2550 0    60   ~ 0
+MISO
+Text Notes 6800 2450 0    60   ~ 0
+SCLK
+Text Notes 6800 2650 0    60   ~ 0
+MOSI
+Text Notes 6800 2750 0    60   ~ 0
+CS
+Text Notes 4950 2650 0    60   ~ 0
+SDA
+Text Notes 4950 2750 0    60   ~ 0
+SCL
+Text GLabel 6400 3700 2    60   Input ~ 0
+GPIO4
+Text GLabel 6400 3600 2    60   Input ~ 0
+GPIO5
+Text GLabel 6400 3800 2    60   Input ~ 0
+GPIO0
+NoConn ~ 6400 4600
+NoConn ~ 6400 4700
 $EndSCHEMATC
