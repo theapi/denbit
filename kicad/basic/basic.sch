@@ -326,12 +326,8 @@ Text GLabel 5500 3500 0    60   Input ~ 0
 A0
 Text GLabel 5500 2400 0    60   Input ~ 0
 A0
-Text GLabel 6400 4700 2    60   Input ~ 0
-D10
 Text GLabel 6400 3800 2    60   Input ~ 0
 D3
-Text GLabel 6400 4600 2    60   Input ~ 0
-D9
 Text GLabel 6400 4500 2    60   Input ~ 0
 D8
 Text GLabel 6400 4400 2    60   Input ~ 0
@@ -348,10 +344,8 @@ Wire Wire Line
 	6400 4800 6950 4800
 Wire Wire Line
 	6400 4100 6950 4100
-NoConn ~ 6400 3500
 NoConn ~ 5500 3600
 NoConn ~ 5500 3700
-NoConn ~ 5500 3800
 NoConn ~ 5500 3900
 NoConn ~ 5500 4000
 NoConn ~ 5500 4100
@@ -460,25 +454,21 @@ F 3 "" H 5500 2900 50  0000 C CNN
 	1    5500 2900
 	1    0    0    -1  
 $EndComp
-Text GLabel 6400 2800 2    60   Input ~ 0
-D10
 Text GLabel 6400 2700 2    60   Input ~ 0
-D9
-Text GLabel 6400 2600 2    60   Input ~ 0
 D8
-Text GLabel 6400 2500 2    60   Input ~ 0
+Text GLabel 6400 2600 2    60   Input ~ 0
 D7
 Text GLabel 6400 2400 2    60   Input ~ 0
-D6
-Text GLabel 5500 2500 0    60   Input ~ 0
-D3
+D5
 Text GLabel 5500 2600 0    60   Input ~ 0
+D3
+Text GLabel 5500 2700 0    60   Input ~ 0
 D4
 NoConn ~ 6400 4200
-Text GLabel 8050 3950 0    60   Input ~ 0
-D10
 Text GLabel 8050 3750 0    60   Input ~ 0
-D9
+SD3
+Text GLabel 8050 3950 0    60   Input ~ 0
+D5
 Text GLabel 8050 4150 0    60   Input ~ 0
 D8
 Text GLabel 8150 2750 0    60   Input ~ 0
@@ -513,8 +503,8 @@ F 3 "" H 8200 3950 50  0000 C CNN
 $EndComp
 Text GLabel 6400 4000 2    60   Input ~ 0
 D5
-Text GLabel 5500 2700 0    60   Input ~ 0
-D5
+Text GLabel 5500 2500 0    60   Input ~ 0
+D0
 Text GLabel 5500 2800 0    60   Input ~ 0
 3V3
 Wire Wire Line
@@ -537,4 +527,12 @@ Text Label 8500 2750 0    60   ~ 0
 S_GREEN
 Text Label 8500 3200 0    60   ~ 0
 S_RED
+Text GLabel 6400 2500 2    60   Input ~ 0
+D6
+Text GLabel 5500 3800 0    60   Input ~ 0
+SD3
+Text GLabel 6400 3500 2    60   Input ~ 0
+D0
+Text GLabel 6400 2800 2    60   Input ~ 0
+3V3
 $EndSCHEMATC
