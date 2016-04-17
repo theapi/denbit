@@ -292,12 +292,12 @@ Text GLabel 5500 4500 0    60   Input ~ 0
 $Comp
 L GND #PWR09
 U 1 1 570FA0BF
-P 6950 4100
-F 0 "#PWR09" H 6950 3850 50  0001 C CNN
-F 1 "GND" H 6950 3950 50  0000 C CNN
-F 2 "" H 6950 4100 50  0000 C CNN
-F 3 "" H 6950 4100 50  0000 C CNN
-	1    6950 4100
+P 7150 4100
+F 0 "#PWR09" H 7150 3850 50  0001 C CNN
+F 1 "GND" H 7150 3950 50  0000 C CNN
+F 2 "" H 7150 4100 50  0000 C CNN
+F 3 "" H 7150 4100 50  0000 C CNN
+	1    7150 4100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -337,7 +337,7 @@ GPIO2
 Wire Wire Line
 	6400 4800 6950 4800
 Wire Wire Line
-	6400 4100 6950 4100
+	6400 4100 7150 4100
 NoConn ~ 5500 3600
 NoConn ~ 5500 3700
 NoConn ~ 5500 3900
@@ -458,10 +458,9 @@ Text GLabel 5500 2600 0    60   Input ~ 0
 GPIO5
 Text GLabel 5500 2700 0    60   Input ~ 0
 GPIO4
-NoConn ~ 6400 4200
-Text GLabel 8050 3750 0    60   Input ~ 0
-GPIO10
 Text GLabel 8050 3950 0    60   Input ~ 0
+GPIO10
+Text GLabel 8050 3750 0    60   Input ~ 0
 GPIO14
 Text GLabel 8050 4150 0    60   Input ~ 0
 GPIO15
@@ -495,7 +494,7 @@ F 3 "" H 8200 3950 50  0000 C CNN
 	1    8200 3950
 	0    1    1    0   
 $EndComp
-Text GLabel 6400 4000 2    60   Input ~ 0
+Text GLabel 6400 4200 2    60   Input ~ 0
 GPIO14
 Text GLabel 5500 2500 0    60   Input ~ 0
 GPIO16
@@ -549,4 +548,30 @@ Text GLabel 6400 3800 2    60   Input ~ 0
 GPIO0
 NoConn ~ 6400 4600
 NoConn ~ 6400 4700
+Text Notes 6850 3550 0    60   ~ 0
+D0
+Text Notes 6850 3650 0    60   ~ 0
+D1
+Text Notes 6850 3750 0    60   ~ 0
+D2
+Text Notes 6850 3850 0    60   ~ 0
+D3
+Text Notes 6850 3950 0    60   ~ 0
+D4
+Text Notes 6850 4050 0    60   ~ 0
+3V3
+Text Notes 6850 4250 0    60   ~ 0
+D5
+Text Notes 6850 4350 0    60   ~ 0
+D6
+Text Notes 6850 4450 0    60   ~ 0
+D7
+Text Notes 6850 4550 0    60   ~ 0
+D8
+Text Notes 6850 4650 0    60   ~ 0
+RX
+Text Notes 6850 4750 0    60   ~ 0
+TX
+Text Notes 4900 3850 0    60   ~ 0
+SD3
 $EndSCHEMATC
