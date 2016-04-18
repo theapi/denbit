@@ -2,13 +2,13 @@
 #define LED_S_GREEN   13 // D7
 #define LED_S_RED     12 // D6
 #define LED_RGB_RED   15 // D8
-#define LED_RGB_GREEN 10 // SD3
-#define LED_RGB_BLUE  14 // D5
+#define LED_RGB_GREEN 14 // D5
+#define LED_RGB_BLUE  10 // SD3
 #define SW1 2
 #define SW2 0
 
 void setup() {
-
+Serial.begin(115200);
   pinMode(LED_S_GREEN, OUTPUT);
   pinMode(LED_S_RED, OUTPUT);
 
@@ -43,6 +43,16 @@ void loop() {
   if (sw2_state) {
     digitalWrite(LED_S_RED, LOW); 
   }
+
+  int analog = analogRead(A0);
+
+  Serial.print("SW1: ");
+  Serial.print(sw1_state);
+  Serial.print("  SW2: ");
+  Serial.print(sw2_state);
+  Serial.print("  A0: ");
+  Serial.print(analog);
+  Serial.println();
   
   digitalWrite(LED_RGB_RED, LOW); 
   digitalWrite(LED_RGB_GREEN, LOW); 
