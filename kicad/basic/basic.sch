@@ -424,9 +424,9 @@ Text GLabel 5500 2600 0    60   Input ~ 0
 GPIO13
 Text GLabel 5500 2400 0    60   Input ~ 0
 GPIO14
-Text GLabel 6400 2600 2    60   Input ~ 0
-GPIO5
 Text GLabel 6400 2700 2    60   Input ~ 0
+GPIO5
+Text GLabel 6400 2600 2    60   Input ~ 0
 GPIO4
 Text GLabel 8050 3950 0    60   Input ~ 0
 GPIO10
@@ -504,9 +504,9 @@ Text Notes 5100 2650 2    60   ~ 0
 MOSI
 Text Notes 5100 2750 2    60   ~ 0
 CS
-Text Notes 6950 2750 2    60   ~ 0
-SDA
 Text Notes 6950 2650 2    60   ~ 0
+SDA
+Text Notes 6950 2750 2    60   ~ 0
 SCL
 Text GLabel 6400 3700 2    60   Input ~ 0
 GPIO4
