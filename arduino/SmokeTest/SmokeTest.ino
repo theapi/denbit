@@ -5,7 +5,7 @@
 #define LED_RGB_GREEN 14 // D5
 #define LED_RGB_BLUE  10 // SD3
 #define SW1 2
-#define SW2 0
+#define SW2 16
 
 void setup() {
 Serial.begin(115200);
