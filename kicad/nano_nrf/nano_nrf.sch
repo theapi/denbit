@@ -287,7 +287,7 @@ F 1 "CONN_01X06" V 7275 4300 50  0000 C CNN
 F 2 "Socket_Strips:Socket_Strip_Straight_1x06" H 7175 4300 50  0001 C CNN
 F 3 "" H 7175 4300 50  0000 C CNN
 	1    7175 4300
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L CONN_01X06 P5
@@ -298,7 +298,7 @@ F 1 "CONN_01X06" V 7825 4300 50  0000 C CNN
 F 2 "Socket_Strips:Socket_Strip_Straight_1x06" H 7725 4300 50  0001 C CNN
 F 3 "" H 7725 4300 50  0000 C CNN
 	1    7725 4300
-	-1   0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L GND #PWR07
@@ -326,7 +326,7 @@ Text Label 8050 4450 0    60   ~ 0
 3V3
 Text Label 6600 4450 0    60   ~ 0
 3V3
-Text Label 6600 4350 0    60   ~ 0
+Text Label 7700 3000 0    60   ~ 0
 5V
 Text Label 8050 4350 0    60   ~ 0
 13(SCK)
@@ -414,9 +414,9 @@ Wire Wire Line
 	6600 4450 6975 4450
 Text Label 10750 1600 0    60   ~ 0
 5V
-Text Label 6600 4250 0    60   ~ 0
+Text Label 6600 4350 0    60   ~ 0
 A5(SCL)
-Text Label 6600 4150 0    60   ~ 0
+Text Label 6600 4250 0    60   ~ 0
 A4(SDA)
 Text Label 6600 4050 0    60   ~ 0
 A0
@@ -452,7 +452,6 @@ NoConn ~ 9275 1500
 NoConn ~ 9275 1700
 NoConn ~ 9275 1900
 NoConn ~ 10350 2500
-NoConn ~ 10350 2300
 NoConn ~ 10350 2200
 NoConn ~ 10350 2100
 NoConn ~ 10350 1800
@@ -470,4 +469,34 @@ Text Label 9075 4075 0    60   ~ 0
 11(MOSI)
 Text Label 10250 3975 0    60   ~ 0
 12(MISO)
+Text Label 10750 2300 0    60   ~ 0
+A1
+Wire Wire Line
+	10350 2300 10750 2300
+Text Label 6600 4150 0    60   ~ 0
+A1
+$Comp
+L CONN_01X02 P10
+U 1 1 57169F53
+P 7350 3050
+F 0 "P10" H 7350 3200 50  0000 C CNN
+F 1 "CONN_01X02" V 7450 3050 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 7350 3050 50  0001 C CNN
+F 3 "" H 7350 3050 50  0000 C CNN
+	1    7350 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 5716A32E
+P 7550 3100
+F 0 "#PWR09" H 7550 2850 50  0001 C CNN
+F 1 "GND" H 7550 2950 50  0000 C CNN
+F 2 "" H 7550 3100 50  0000 C CNN
+F 3 "" H 7550 3100 50  0000 C CNN
+	1    7550 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 3000 7700 3000
 $EndSCHEMATC
