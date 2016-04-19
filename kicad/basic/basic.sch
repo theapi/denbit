@@ -437,7 +437,7 @@ GPIO15
 Text GLabel 8150 2750 0    60   Input ~ 0
 GPIO13
 Text GLabel 3950 2450 2    60   Input ~ 0
-GPIO0
+GPIO16
 Text GLabel 3950 3050 2    60   Input ~ 0
 GPIO2
 $Comp
@@ -545,5 +545,5 @@ SD3
 Text Notes 3100 2800 0    60   ~ 0
 Internal pullups on the swiches
 Text GLabel 6400 2500 2    60   Input ~ 0
-GPIO0
+GPIO16
 $EndSCHEMATC
