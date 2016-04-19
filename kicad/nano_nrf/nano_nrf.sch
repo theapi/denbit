@@ -78,10 +78,8 @@ Text Label 8550 2300 0    60   ~ 0
 8
 Text Label 8550 2500 0    60   ~ 0
 10(SS)
-Text Label 10250 3975 0    60   ~ 0
-11(MISO)
 Text Label 8550 2700 0    60   ~ 0
-12(MOSI)
+12(MISO)
 Text Label 10750 2700 0    60   ~ 0
 13(SCK)
 Text Label 10750 2400 0    60   ~ 0
@@ -142,9 +140,7 @@ NoConn ~ 9550 3975
 Text Label 10250 4075 0    60   ~ 0
 13(SCK)
 Text Label 8550 2600 0    60   ~ 0
-11(MISO)
-Text Label 9075 4075 0    60   ~ 0
-12(MOSI)
+11(MOSI)
 Text Label 9075 4175 0    60   ~ 0
 8
 Text Label 9075 4275 0    60   ~ 0
@@ -332,10 +328,6 @@ Text Label 6600 4450 0    60   ~ 0
 3V3
 Text Label 6600 4350 0    60   ~ 0
 5V
-Text Label 8050 4150 0    60   ~ 0
-11(MISO)
-Text Label 8050 4250 0    60   ~ 0
-12(MOSI)
 Text Label 8050 4350 0    60   ~ 0
 13(SCK)
 Text Label 8050 4050 0    60   ~ 0
@@ -470,4 +462,12 @@ NoConn ~ 10350 1500
 NoConn ~ 9275 2200
 Wire Wire Line
 	9275 2400 8550 2400
+Text Label 8050 4250 0    60   ~ 0
+12(MISO)
+Text Label 8050 4150 0    60   ~ 0
+11(MOSI)
+Text Label 9075 4075 0    60   ~ 0
+11(MOSI)
+Text Label 10250 3975 0    60   ~ 0
+12(MISO)
 $EndSCHEMATC
