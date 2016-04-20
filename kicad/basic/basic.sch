@@ -347,7 +347,6 @@ NoConn ~ 5500 4200
 NoConn ~ 5500 4300
 NoConn ~ 5500 4600
 NoConn ~ 5500 4700
-NoConn ~ 5500 4900
 Wire Wire Line
 	5150 4400 5500 4400
 Wire Wire Line
@@ -546,4 +545,30 @@ Text Notes 3100 2800 0    60   ~ 0
 Internal pullups on the swiches
 Text GLabel 6400 2500 2    60   Input ~ 0
 GPIO16
+$Comp
+L CONN_01X02 P1
+U 1 1 57175B5D
+P 2425 3950
+F 0 "P1" H 2425 4100 50  0000 C CNN
+F 1 "EXT_PWR" V 2525 3950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 2425 3950 50  0001 C CNN
+F 3 "" H 2425 3950 50  0000 C CNN
+	1    2425 3950
+	1    0    0    1   
+$EndComp
+$Comp
+L GND #PWR016
+U 1 1 57175D11
+P 2225 4000
+F 0 "#PWR016" H 2225 3750 50  0001 C CNN
+F 1 "GND" H 2225 3850 50  0000 C CNN
+F 2 "" H 2225 4000 50  0000 C CNN
+F 3 "" H 2225 4000 50  0000 C CNN
+	1    2225 4000
+	1    0    0    -1  
+$EndComp
+Text GLabel 5500 4900 0    60   Input ~ 0
+VIN
+Text GLabel 2225 3900 0    60   Input ~ 0
+VIN
 $EndSCHEMATC
