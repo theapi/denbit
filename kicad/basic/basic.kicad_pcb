@@ -73,7 +73,7 @@
       (usegerberextensions true)
       (usegerberattributes true)
       (excludeedgelayer true)
-      (linewidth 0.101600)
+      (linewidth 0.100000)
       (plotframeref false)
       (viasonmask false)
       (mode 1)
