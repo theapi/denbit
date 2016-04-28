@@ -1,0 +1,19 @@
+{
+  "name": "Denbit",
+  "keywords": "wifi, http, web, server, client, websocket, nodemcu, esp8266",
+  "description": "Dennis nodemcu dev",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/theapi/denbit.git"
+  },
+  "exclude": "tests",
+  "frameworks": "arduino",
+  "platforms": "*",
+  "authors":
+  {
+    "name": "Peter Clarke",
+    "url": "https://github.com/theapi/denbit",
+    "maintainer": true
+  }
+}
