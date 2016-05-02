@@ -1,3 +1,4 @@
+
 /** 
    Knock Sensor
 
@@ -15,13 +16,10 @@
 
 */
 
-#define LED_S_GREEN   13 // D7
-#define LED_S_RED     12 // D6
-#define LED_RGB_RED   15 // D8
-#define LED_RGB_GREEN 14 // D5
-#define LED_RGB_BLUE  10 // SD3
-#define SW1 2
-#define SW2 16
+// Include the Denbit library.
+#include <Denbit.h>
+// Initialize the denbit.
+Denbit denbit;
 
 // these constants won't change:
 const int knockSensor = A0; // the piezo is connected to analog pin 0
@@ -32,26 +30,17 @@ const int threshold = 100;  // threshold value to decide when the detected sound
 int sensorReading = 0;      // variable to store the value read from the sensor pin
 int ledState = LOW;         // variable used to store the last LED status, to toggle the light
 
+
 void setup() {
-  Serial.begin(115200);       // use the serial port
-  
-  pinMode(LED_S_GREEN, OUTPUT);
-  pinMode(LED_S_RED, OUTPUT);
-
-// RGB led
-  pinMode(LED_RGB_RED, OUTPUT);
-  pinMode(LED_RGB_GREEN, OUTPUT);
-  pinMode(LED_RGB_BLUE, OUTPUT);
-
-// Switches
-  pinMode(SW1, INPUT_PULLUP);
-  pinMode(SW2, INPUT_PULLUP);
+  // Inital the serial port to output sensor values.
+  Serial.begin(115200);
+   
 }
 
 void loop() {
   // read the sensor and store it in the variable sensorReading:
   sensorReading = analogRead(knockSensor);
-  analogWrite(LED_S_RED, sensorReading);
+  analogWrite(DENBIT_RED, sensorReading);
   Serial.println(sensorReading);
   
   
@@ -60,7 +49,7 @@ void loop() {
     // toggle the status of the ledPin:
     ledState = !ledState;
     // update the LED pin itself:
-    digitalWrite(LED_S_GREEN, ledState);
+    digitalWrite(DENBIT_GREEN, ledState);
     // send the string "Knock!" back to the computer, followed by newline
     Serial.println("Knock!");
   }
