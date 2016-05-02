@@ -1,47 +1,49 @@
 
-#define LED_S_GREEN   13 // D7
-#define LED_S_RED     12 // D6
-#define LED_RGB_RED   15 // D8
-#define LED_RGB_GREEN 14 // D5
-#define LED_RGB_BLUE  10 // SD3
-#define SW1 2
-#define SW2 16
+#define DENBIT_GREEN     13 // D7
+#define DENBIT_RED       12 // D6
+#define DENBIT_RGB_RED   15 // D8
+#define DENBIT_RGB_GREEN 14 // D5
+#define DENBIT_RGB_BLUE  10 // SD3
+#define DENBIT_SW1 2
+#define DENBIT_SW2 16
 
 void setup() {
-Serial.begin(115200);
-  pinMode(LED_S_GREEN, OUTPUT);
-  pinMode(LED_S_RED, OUTPUT);
+  // Single LEDs
+  pinMode(DENBIT_GREEN, OUTPUT);
+  pinMode(DENBIT_RED, OUTPUT);
 
-// RGB led
-  pinMode(LED_RGB_RED, OUTPUT);
-  pinMode(LED_RGB_GREEN, OUTPUT);
-  pinMode(LED_RGB_BLUE, OUTPUT);
+  // RGB led
+  pinMode(DENBIT_RGB_RED, OUTPUT);
+  pinMode(DENBIT_RGB_GREEN, OUTPUT);
+  pinMode(DENBIT_RGB_BLUE, OUTPUT);
 
-// Switches
-  pinMode(SW1, INPUT_PULLUP);
-  pinMode(SW2, INPUT_PULLUP);
+  // Switches
+  pinMode(DENBIT_SW1, INPUT_PULLUP);
+  pinMode(DENBIT_SW2, INPUT_PULLUP);
+
+  Serial.begin(115200);
 }
 
 void loop() {
 
-  digitalWrite(LED_S_GREEN, HIGH);
-  digitalWrite(LED_S_RED, HIGH);
+  digitalWrite(DENBIT_GREEN, HIGH);
+  digitalWrite(DENBIT_RED, HIGH);
 
-  digitalWrite(LED_RGB_RED, HIGH);
-  digitalWrite(LED_RGB_GREEN, HIGH);
-  digitalWrite(LED_RGB_BLUE, HIGH);
+  digitalWrite(DENBIT_RGB_RED, HIGH);
+  digitalWrite(DENBIT_RGB_GREEN, HIGH);
+  digitalWrite(DENBIT_RGB_BLUE, HIGH);
   
   delay(1000);      
 
- byte sw1_state = digitalRead(SW1);
- byte sw2_state = digitalRead(SW2);
+ byte sw1_state = digitalRead(DENBIT_SW1);
+ byte sw2_state = digitalRead(DENBIT_SW2);
 
   // Do not flash if the button is not held down.
   if (sw1_state) {
-    digitalWrite(LED_S_GREEN, LOW);  
+    digitalWrite(DENBIT_GREEN, LOW);  
   }
   if (sw2_state) {
-    digitalWrite(LED_S_RED, LOW); 
+    digitalWrite(DENBIT_RED, LOW); 
   }
 
   int analog = analogRead(A0);
@@ -54,9 +56,9 @@ void loop() {
   Serial.print(analog);
   Serial.println();
   
-  digitalWrite(LED_RGB_RED, LOW); 
-  digitalWrite(LED_RGB_GREEN, LOW); 
-  digitalWrite(LED_RGB_BLUE, LOW); 
+  digitalWrite(DENBIT_RGB_RED, LOW); 
+  digitalWrite(DENBIT_RGB_GREEN, LOW); 
+  digitalWrite(DENBIT_RGB_BLUE, LOW); 
   
   delay(1000);
 }
