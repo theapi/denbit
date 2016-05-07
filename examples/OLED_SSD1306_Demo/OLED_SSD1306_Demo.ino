@@ -28,6 +28,12 @@ See more at http://blog.squix.ch
 #include "SSD1306Ui.h"
 #include "images.h"
 
+// Include the Denbit library.
+#include <Denbit.h>
+// Initialize the denbit.
+Denbit denbit;
+
+
 // Pin definitions for I2C
 #define OLED_SDA    4  
 #define OLED_SDC    5  
