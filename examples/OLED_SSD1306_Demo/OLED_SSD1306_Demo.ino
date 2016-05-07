@@ -22,6 +22,8 @@ SOFTWARE.
 
 See more at http://blog.squix.ch
 */
+// Install the SSD1306 library from https://github.com/squix78/esp8266-oled-ssd1306
+
 #include <Wire.h>
 #include <SPI.h>
 #include "SSD1306.h"
