@@ -74,7 +74,7 @@ bool drawFrame1(SSD1306 *display, SSD1306UiState* state, int x, int y) {
 
   // if this frame need to be refreshed at the targetFPS you need to
   // return true
-  display->drawXbm(x + 34, y + 14, WiFi_Logo_width, WiFi_Logo_height, WiFi_Logo_bits);
+  display->drawXbm(x + 34, y + 14, dennis_logo_width, dennis_logo_height, dennis_logo_bits);
   return false;
 }
 
