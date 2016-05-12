@@ -15,6 +15,10 @@
 
 #include <Servo.h>
 
+// Include the configuration file.
+#include "wifi_config.h"
+// Include the file that has the html.
+#include "html.h"
 // Include the Denbit library.
 #include <Denbit.h>
 // Initialize the denbit.
@@ -75,7 +79,6 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t lenght
 }
 
 void setup() {
-    //Serial.begin(921600);
     Serial.begin(115200);
 
     Serial.setDebugOutput(true);
@@ -94,7 +97,7 @@ void setup() {
     digitalWrite(ledGreen, 0);
     digitalWrite(ledBlue, 0);
 
-    WiFiMulti.addAP("SSID", "passpasspass");
+    WiFiMulti.addAP(WIFI_SSID, WIFI_PASS);
 
     while(WiFiMulti.run() != WL_CONNECTED) {
         delay(100);
@@ -111,7 +114,7 @@ void setup() {
     // handle index
     server.on("/", []() {
         // send index.html
-        server.send(200, "text/html", "<html><head><script>var connection = new WebSocket('ws://'+location.hostname+':81/', ['arduino']);connection.onopen = function () {  connection.send('Connect ' + new Date()); }; connection.onerror = function (error) {    console.log('WebSocket Error ', error);};connection.onmessage = function (e) {  console.log('Server: ', e.data);};function sendRGB() {  var r = parseInt(document.getElementById('r').value).toString(16);  var g = parseInt(document.getElementById('g').value).toString(16);  var b = parseInt(document.getElementById('b').value).toString(16);  if(r.length < 2) { r = '0' + r; }   if(g.length < 2) { g = '0' + g; }   if(b.length < 2) { b = '0' + b; }   var rgb = '#'+r+g+b;    console.log('RGB: ' + rgb); connection.send(rgb); }</script></head><body>LED Control:<br/><br/>R: <input id=\"r\" type=\"range\" min=\"0\" max=\"255\" step=\"1\" onchange=\"sendRGB();\" /><br/>G: <input id=\"g\" type=\"range\" min=\"0\" max=\"255\" step=\"1\" onchange=\"sendRGB();\" /><br/>B: <input id=\"b\" type=\"range\" min=\"0\" max=\"255\" step=\"1\" onchange=\"sendRGB();\" /><br/></body></html>");
+        server.send(200, "text/html", index_html);
     });
 
     server.begin();
