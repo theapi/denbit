@@ -1,7 +1,7 @@
 /*
  * Servo WebSocketServer
  *
- * Install the library from https://github.com/Links2004/arduinoWebSockets
+ * Install the library from https://github.com/Links2004/arduinoWebSockets/releases
  */
 
 #include <Arduino.h>
