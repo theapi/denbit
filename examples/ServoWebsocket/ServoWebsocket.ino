@@ -4,19 +4,13 @@
  * Install the library from https://github.com/Links2004/arduinoWebSockets/releases
  */
 
-#include <Arduino.h>
-
 #include <ESP8266WiFi.h>
-#include <ESP8266WiFiMulti.h>
 #include <WebSocketsServer.h>
 #include <ESP8266WebServer.h>
-#include <ESP8266mDNS.h>
 #include <Hash.h>
-
+#include <WiFiClient.h> 
 #include <Servo.h>
 
-// Include the configuration file.
-#include "wifi_config.h"
 // Include the file that has the html.
 #include "html.h"
 // Include the Denbit library.
@@ -24,7 +18,9 @@
 // Initialize the denbit.
 Denbit denbit;
 
-
+/* Set these to your desired credentials. */
+const char *ssid = "ESPap";
+const char *password = "12345678";
 
 // Assign readable names to the led pin numbers
 const int ledRed =  15; 
@@ -34,8 +30,6 @@ const int ledBlue =  10;
 int servoPosition; // Where to move the servo to.
 
 Servo servoA;  // create servo object to control a servo
-
-ESP8266WiFiMulti WiFiMulti;
 
 ESP8266WebServer server = ESP8266WebServer(80);
 WebSocketsServer webSocket = WebSocketsServer(81);
@@ -81,35 +75,21 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t lenght
 void setup() {
     Serial.begin(115200);
 
-    Serial.setDebugOutput(true);
-
-    Serial.println();
-    Serial.println();
-    Serial.println();
-
-    for(uint8_t t = 4; t > 0; t--) {
-        Serial.printf("[SETUP] BOOT WAIT %d...\n", t);
-        Serial.flush();
-        delay(1000);
-    }
+    //Serial.setDebugOutput(true);
 
     digitalWrite(ledRed, 0);
     digitalWrite(ledGreen, 0);
     digitalWrite(ledBlue, 0);
 
-    WiFiMulti.addAP(WIFI_SSID, WIFI_PASS);
-
-    while(WiFiMulti.run() != WL_CONNECTED) {
-        delay(100);
-    }
+    Serial.print("Configuring access point...");
+    WiFi.softAP(ssid);
+    IPAddress myIP = WiFi.softAPIP();
+    Serial.print("AP IP address: ");
+    Serial.println(myIP);
 
     // start webSocket server
     webSocket.begin();
     webSocket.onEvent(webSocketEvent);
-
-    if(MDNS.begin("esp8266")) {
-        Serial.println("MDNS responder started");
-    }
 
     // handle index
     server.on("/", []() {
@@ -118,14 +98,7 @@ void setup() {
     });
 
     server.begin();
-
-    // Add service to MDNS
-    MDNS.addService("http", "tcp", 80);
-    MDNS.addService("ws", "tcp", 81);
-
-    digitalWrite(ledRed, 0);
-    digitalWrite(ledGreen, 0);
-    digitalWrite(ledBlue, 0);
+    Serial.println("HTTP server started");
 
 }
 
