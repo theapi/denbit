@@ -49,7 +49,7 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t lenght
         }
             break;
         case WStype_TEXT:
-            Serial.printf("[%u] get Text: %s\n", num, payload);
+            Serial.printf("[%u]: %s\n", num, payload);
 
             if(payload[0] == '#') {
                 // we get RGB data
@@ -63,8 +63,19 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t lenght
 
                 // Move the servo to according to the red value.
                 int redVal = (rgb >> 16) & 0xFF;
-                servoPosition = map(redVal, 0, 255, 0, 180); // scale it to use it with the servo (value between 0 and 180)
+                /*
+                int newServoPosition = map(redVal, 0, 255, 0, 180); // scale it to use it with the servo (value between 0 and 180)
+                if (newServoPosition > servoPosition) {
+                  servoPosition++;
+                } else if (newServoPosition < servoPosition) {
+                  servoPosition--;
+                }
+                */
+                //servoPosition = map(redVal, 0, 255, 0, 180);
+                servoPosition = redVal;
                 servoA.write(servoPosition);             // sets the servo position according to the scaled value
+                Serial.printf("[%u]: %d\n", num, servoPosition);
+                delay(15); // Wait for the servo to move
             }
 
             break;
@@ -74,6 +85,8 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t lenght
 
 void setup() {
     Serial.begin(115200);
+
+    servoA.attach(4);
 
     //Serial.setDebugOutput(true);
 
