@@ -93,15 +93,12 @@ function init()
   ball.position = {x:0,y:0}
     
     if (window.DeviceOrientationEvent) {
-    
-    window.addEventListener("deviceorientation", function(event) 
-    {
-      ball.velocity.y = Math.round(event.beta);
-      ball.velocity.x = Math.round(event.gamma);
-
-      connection.send(event.beta);
-        }
-                               )
+      window.addEventListener("deviceorientation", function(event) {
+        ball.velocity.y = Math.round(event.beta);
+        ball.velocity.x = Math.round(event.gamma);
+  
+        connection.send("#" + ball.velocity.x + "," + ball.velocity.y);
+      })
     };
     
     update();

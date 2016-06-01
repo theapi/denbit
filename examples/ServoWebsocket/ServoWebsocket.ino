@@ -51,18 +51,32 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t lenght
         case WStype_TEXT:
             Serial.printf("[%u]: %s\n", num, payload);
 
-            if(payload[0] == '#') {
+            if (payload[0] == '#') {
+                String csv = String((const char *) &payload[1]);
+                int commaIndex = csv.indexOf(',');
+                //  Search for the next comma just after the first
+                //int secondCommaIndex = csv.indexOf(',', commaIndex+1);
+                String firstValue = csv.substring(0, commaIndex);
+                String secondValue = csv.substring(commaIndex+1);
+//Serial.print(firstValue); Serial.print(","); Serial.print(secondValue);
+                Serial.printf(" Parsed: %d,%d\n", firstValue.toInt(), secondValue.toInt());
+
+                analogWrite(ledRed, abs(firstValue.toInt()));
+                analogWrite(ledGreen, abs(secondValue.toInt()));
+              
                 // we get RGB data
 
+
+/*
                 // decode rgb data
                 uint32_t rgb = (uint32_t) strtol((const char *) &payload[1], NULL, 16);
 
                 analogWrite(ledRed,    ((rgb >> 16) & 0xFF));
                 analogWrite(ledGreen,  ((rgb >> 8) & 0xFF));
                 analogWrite(ledBlue,   ((rgb >> 0) & 0xFF));
-
+*/
                 // Move the servo to according to the red value.
-                int redVal = (rgb >> 16) & 0xFF;
+                //int redVal = (rgb >> 16) & 0xFF;
                 /*
                 int newServoPosition = map(redVal, 0, 255, 0, 180); // scale it to use it with the servo (value between 0 and 180)
                 if (newServoPosition > servoPosition) {
@@ -72,9 +86,9 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t lenght
                 }
                 */
                 //servoPosition = map(redVal, 0, 255, 0, 180);
-                servoPosition = redVal;
-                servoA.write(servoPosition);             // sets the servo position according to the scaled value
-                Serial.printf("[%u]: %d\n", num, servoPosition);
+                //servoPosition = redVal;
+                //servoA.write(servoPosition);             // sets the servo position according to the scaled value
+                //Serial.printf("[%u]: %d\n", num, servoPosition);
                 delay(15); // Wait for the servo to move
             }
 
