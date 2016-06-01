@@ -80,6 +80,7 @@ if ( !window.requestAnimationFrame ) {
 var ball;
 var w;
 var h;
+var alpha;
  
 function init()
 {
@@ -94,10 +95,14 @@ function init()
     
     if (window.DeviceOrientationEvent) {
       window.addEventListener("deviceorientation", function(event) {
+        // beta is the front-to-back tilt in degrees, where front is positive
         ball.velocity.y = Math.round(event.beta);
+        // gamma is the left-to-right tilt in degrees, where right is positive
         ball.velocity.x = Math.round(event.gamma);
+        // alpha is the compass direction the device is facing in degrees
+        alpha = Math.round(event.alpha);
   
-        connection.send("#" + ball.velocity.x + "," + ball.velocity.y);
+        connection.send("#" + ball.velocity.x + "," + ball.velocity.y + "," + alpha);
       })
     };
     

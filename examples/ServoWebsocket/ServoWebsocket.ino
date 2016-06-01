@@ -55,14 +55,16 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t lenght
                 String csv = String((const char *) &payload[1]);
                 int commaIndex = csv.indexOf(',');
                 //  Search for the next comma just after the first
-                //int secondCommaIndex = csv.indexOf(',', commaIndex+1);
+                int secondCommaIndex = csv.indexOf(',', commaIndex+1);
                 String firstValue = csv.substring(0, commaIndex);
-                String secondValue = csv.substring(commaIndex+1);
-//Serial.print(firstValue); Serial.print(","); Serial.print(secondValue);
-                Serial.printf(" Parsed: %d,%d\n", firstValue.toInt(), secondValue.toInt());
+                String secondValue = csv.substring(commaIndex+1, secondCommaIndex);
+                String thirdValue = csv.substring(secondCommaIndex+1);
+//Serial.print(firstValue); Serial.print(","); Serial.print(secondValue); Serial.print(","); Serial.print(thirdValue);
+                Serial.printf(" Parsed: %d,%d,%d\n", firstValue.toInt(), secondValue.toInt(), thirdValue.toInt());
 
                 analogWrite(ledRed, abs(firstValue.toInt()));
                 analogWrite(ledGreen, abs(secondValue.toInt()));
+                analogWrite(ledBlue, abs(thirdValue.toInt()));
               
                 // we get RGB data
 
