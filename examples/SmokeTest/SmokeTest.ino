@@ -19,7 +19,7 @@ void setup() {
 
   // Switches
   pinMode(DENBIT_SW1, INPUT_PULLUP);
-  pinMode(DENBIT_SW2, INPUT_PULLUP);
+  pinMode(DENBIT_SW2, INPUT);
 
   Serial.begin(115200);
 }
