@@ -17,11 +17,13 @@ Training wheels for the nodemcu
  - [Download the latest release of this repo](https://github.com/theapi/denbit/releases)
  - Sketch -> Include Library -> Add .ZIP Library... then select the file downloaded in the step above.
 - Connect the denbit to the usb port of the computer.
-- Load the test "sketch"
- - File -> Examples -> Denbit -> SmokeTest
+- Load the Blink "sketch"
+ - File -> Examples -> Denbit -> Basics -> Blink
  - Compile the software: click the tick in the top left of the Arduino application... wait while it compiles...
  - Upload the software: click the arrow in the top left of the Arduino application... wait while it uploads
   - The led will be blue while it uploads. 
+  - When the Arduino window says "Done uploading" the green light will blink on & off
+ - Change the Blink sketch so that `delay(1000)` is `delay(500)`, then compile & upload again. The green LED will now blink twice as fast 
 
 [1]:https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx
 [2]:https://www.silabs.com/Support%20Documents/Software/Mac_OSX_VCP_Driver.zip
