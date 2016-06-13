@@ -14,7 +14,7 @@ Denbit::Denbit()
 
   // Switches
   pinMode(DENBIT_SW1, INPUT_PULLUP);
-  pinMode(DENBIT_SW2, INPUT_PULLUP);
+  pinMode(DENBIT_SW2, INPUT); // No pullup on pin 16
 
 
   digitalWrite(DENBIT_GREEN, LOW);
