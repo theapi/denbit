@@ -1,6 +1,9 @@
 
 examples/ServoWebsocket/wifi_config.h
 
+.DS_Store
+
+
 # For PCBs designed using KiCAD: http://www.kicad-pcb.org/
 
 # Temporary files
