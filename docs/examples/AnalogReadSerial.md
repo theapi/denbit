@@ -3,6 +3,8 @@
 This example shows you how to monitor the value of the analog pin A0, by establishing serial communication 
 between your Denbit and your computer over USB. 
 
+Just put a wire into the connector marked A0 as this is the analog input:
+![image](img/analog_read_bb.png)
 
 ### Load the AnalogReadSerial sketch
 - File -> Examples -> Denbit -> Basics -> AnalogReadSerial
