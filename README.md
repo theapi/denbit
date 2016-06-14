@@ -15,13 +15,13 @@ Training wheels for the nodemcu
  - Open Boards Manager from `Tools > Board menu` and select `NodeMCU 1.0 (ESP-12E Module)`.
 - Install the denbit library 
  - [Download the latest release of this repo](https://github.com/theapi/denbit/releases)
- - Sketch -> Include Library -> Add .ZIP Library... then select the file downloaded in the step above.
+ - `Sketch -> Include Library -> Add .ZIP Library...` then select the file downloaded in the step above.
 - Connect the denbit to the usb port of the computer.
 - Load the Blink "sketch"
- - File -> Examples -> Denbit -> Basics -> Blink
+ - `File -> Examples -> Denbit -> Basics -> Blink`
  - Compile the software: click the tick in the top left of the Arduino application... wait while it compiles...
  - Upload the software: click the arrow in the top left of the Arduino application... wait while it uploads
-  - The led will be blue while it uploads. 
+  - The center led will be blue while it uploads. 
   - When the Arduino window says "Done uploading" the green light will blink on & off
  - Change the Blink sketch so that `delay(1000)` is `delay(500)`, then compile & upload again. The green LED will now blink twice as fast
  
