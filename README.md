@@ -23,7 +23,17 @@ Training wheels for the nodemcu
  - Upload the software: click the arrow in the top left of the Arduino application... wait while it uploads
   - The led will be blue while it uploads. 
   - When the Arduino window says "Done uploading" the green light will blink on & off
- - Change the Blink sketch so that `delay(1000)` is `delay(500)`, then compile & upload again. The green LED will now blink twice as fast 
+ - Change the Blink sketch so that `delay(1000)` is `delay(500)`, then compile & upload again. The green LED will now blink twice as fast
+ 
+ 
+## Play with the Denbit "Basic" examples
+- [Fade](docs/examples/Fade.md)
+- [DigitalReadSerial](docs/examples/DigitalReadSerial.md)
+- [AnalogReadSerial](docs/examples/AnalogReadSerial.md)
+- [Denbit](docs/examples/Denbit.md)
+- [Knob](docs/examples/Knob.md)
+- [Temperature](docs/examples/Temperature.md)
+- [Knock](docs/examples/Knock.md)
 
 [1]:https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx
 [2]:https://www.silabs.com/Support%20Documents/Software/Mac_OSX_VCP_Driver.zip
