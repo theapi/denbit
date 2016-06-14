@@ -3,7 +3,7 @@
 This example shows you how to monitor the value of a knob (potentiometer) by establishing serial communication 
 between your Denbit and your computer over USB. 
 
-![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/potentiometer_bb.png)
+![image](img/potentiometer_bb.png)
 
 ### Load the Knob sketch
 - File -> Examples -> Denbit -> Basics -> Knob
