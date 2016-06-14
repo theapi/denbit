@@ -27,13 +27,13 @@ Training wheels for the nodemcu
  
  
 ## Play with the Denbit "Basic" examples
-- [Fade](docs/examples/Fade.md)
-- [DigitalReadSerial](docs/examples/DigitalReadSerial.md)
-- [AnalogReadSerial](docs/examples/AnalogReadSerial.md)
-- [Denbit](docs/examples/Denbit.md)
-- [Knob](docs/examples/Knob.md)
-- [Temperature](docs/examples/Temperature.md)
-- [Knock](docs/examples/Knock.md)
+- [Fade](docs/examples/Basics/Fade.md)
+- [DigitalReadSerial](docs/examples/Basics/DigitalReadSerial.md)
+- [AnalogReadSerial](docs/examples/Basics/AnalogReadSerial.md)
+- [Denbit](docs/examples/Basics/Denbit.md)
+- [Knob](docs/examples/Basics/Knob.md)
+- [Temperature](docs/examples/Basics/Temperature.md)
+- [Knock](docs/examples/Basics/Knock.md)
 
 [1]:https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx
 [2]:https://www.silabs.com/Support%20Documents/Software/Mac_OSX_VCP_Driver.zip
