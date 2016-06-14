@@ -1,7 +1,6 @@
 # Denbit
 
-This example shows you how to monitor the state of the left switch by establishing serial communication 
-between your Denbit and your computer over USB. 
+This example shows you how to use the Denbit library to initialise the Denbit. 
 
 
 ### Load the Denbit sketch
