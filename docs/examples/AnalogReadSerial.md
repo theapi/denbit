@@ -1,6 +1,6 @@
 # AnalogReadSerial
 
-This example shows you how to monitor the state of the left switch by establishing serial communication 
+This example shows you how to monitor the value of the analog pin A0, by establishing serial communication 
 between your Denbit and your computer over USB. 
 
 
