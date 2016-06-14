@@ -21,7 +21,7 @@ If the wrong value is set, only gibberish will appear on the monitor.
 Instead of using the serial monitor, you can see a graphical representation of the data by closing the serial monitor
 and opening the serial plotter instead (Tools > Serial Plotter menu). 
 
-The serial monitor & the serial plotter cannot both be used at the seame time
+The serial monitor & the serial plotter cannot both be used at the same time
 
 ### Why?
 This demonstrates reading voltage on the analog pin A0 and using that data.
