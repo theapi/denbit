@@ -32,11 +32,19 @@ Training wheels for the NodeMCU
 - Connect the denbit to the usb port of the computer.
 - Load the Blink "sketch"
  - `File -> Examples -> Denbit -> Basics -> Blink`
- - Compile the software: click the tick in the top left of the Arduino application... wait while it compiles...
+ - Compile (verify) the software: click the tick in the top left of the Arduino application... 
+ - 
+ ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/compile.png)
+
+ - wait while it compiles...
  
 ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/compiling.png) 
  
- - Upload the software: click the arrow in the top left of the Arduino application... wait while it uploads
+ - Upload the software: click the arrow in the top left of the Arduino application:
+ 
+ ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/upload.png)
+
+ - wait while it uploads...
  
 ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/uploading.png)
 
