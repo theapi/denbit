@@ -4,7 +4,7 @@ This example shows you how to use the Denbit library to initialise the Denbit.
 
 
 ### Load the Denbit sketch
-- File -> Examples -> Denbit -> Basics -> Denbit
+- `File -> Examples -> Denbit -> Basics -> Denbit`
 - Compile the software: click the tick in the top left of the Arduino application... wait while it compiles...
 - Upload the software: click the arrow in the top left of the Arduino application... wait while it uploads
 
