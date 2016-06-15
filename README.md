@@ -15,7 +15,7 @@ Training wheels for the NodeMCU
  
  ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/prefs.png )
 
- - Open the Boards Manager:
+ - Open the Boards Manager `Tools > Board > Boards Manager...`:
  
  ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_manager_select.png)
 
