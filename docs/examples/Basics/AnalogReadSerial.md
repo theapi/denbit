@@ -7,7 +7,7 @@ Just put a wire into the connector marked A0 as this is the analog input:
 ![image](img/analog_read_bb.png)
 
 ### Load the AnalogReadSerial sketch
-- File -> Examples -> Denbit -> Basics -> AnalogReadSerial
+- `File -> Examples -> Denbit -> Basics -> AnalogReadSerial`
 - Compile the software: click the tick in the top left of the Arduino application... wait while it compiles...
 - Upload the software: click the arrow in the top left of the Arduino application... wait while it uploads
  
@@ -25,7 +25,10 @@ and opening the serial plotter instead (Tools > Serial Plotter menu).
 
 The serial monitor & the serial plotter cannot both be used at the same time
 
+### Touch
+Touch & relaease the wire and see how the numbers/graph changes. 
+
 ### Why?
-This demonstrates reading voltage on the analog pin A0 and using that data.
+This demonstrates reading voltage on the analog pin A0 and seeing that data.
 
 Further info is here [https://www.arduino.cc/en/Tutorial/AnalogReadSerial](https://www.arduino.cc/en/Tutorial/AnalogReadSerial)
