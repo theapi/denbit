@@ -4,7 +4,7 @@ Fades the red light (led) between off and on continually.
 
 
 ### Load the Fade sketch
-- File -> Examples -> Denbit -> Basics -> Fade
+- `File -> Examples -> Denbit -> Basics -> Fade`
 - Compile the software: click the tick in the top left of the Arduino application... wait while it compiles...
 - Upload the software: click the arrow in the top left of the Arduino application... wait while it uploads
 
@@ -13,4 +13,4 @@ This demonstrates that even though the micocontoller can only output ones and ze
 
 The process is called PWD, Pulsed Width Modulation. 
 
-Further info is here [https://www.arduino.cc/en/Tutorial/PWM](https://www.arduino.cc/en/Tutorial/PWM)
+Further info is here [https://www.arduino.cc/en/Tutorial/PWM]
