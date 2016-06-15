@@ -1,5 +1,5 @@
 # Denbit
-Training wheels for the nodemcu
+Training wheels for the NodeMCU
 -------------------------------------------------------------
 ![image](https://raw.githubusercontent.com/theapi/denbit/master/kicad/basic/denbit_front.png)
 
@@ -11,7 +11,9 @@ Training wheels for the nodemcu
 - Install the NodeMCU "board" into the Arduino IDE:
  - Install Arduino 1.6.9 from the Arduino website.
  - Start Arduino and open Preferences window.
- - Enter http://arduino.esp8266.com/stable/package_esp8266com_index.json into Additional Board Manager URLs field.
+ - Enter http://arduino.esp8266.com/stable/package_esp8266com_index.json into Additional Board Manager URLs field:
+ ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/prefs.png )
+ 
  - Open Boards Manager, scroll down to `esp8266 by ESP8266 Community` and select varsion 2.2.0 then click install. 
  - Select the NodeMCU 1.0 board from `Tools > Board menu` and select `NodeMCU 1.0 (ESP-12E Module)`.
 - Install the denbit library 
