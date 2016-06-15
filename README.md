@@ -34,7 +34,13 @@ Training wheels for the NodeMCU
  - `File -> Examples -> Denbit -> Basics -> Blink`
  - Compile the software: click the tick in the top left of the Arduino application... wait while it compiles...
  - Upload the software: click the arrow in the top left of the Arduino application... wait while it uploads
+ 
+![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/uploading.png)
+
   - The center led will be blue while it uploads. 
+
+![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/done_uploading.png) 
+
   - When the Arduino window says *"Done uploading"* the green light will blink on & off
  - Change the Blink sketch so that `delay(1000)` is `delay(500)`, then compile & upload again. The green LED will now blink twice as fast
  
