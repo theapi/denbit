@@ -12,19 +12,19 @@ Training wheels for the NodeMCU
  - Start Arduino and open Preferences window.
  - Enter http://arduino.esp8266.com/stable/package_esp8266com_index.json into Additional Board Manager URLs field:
  
- ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/prefs.png )
+ ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/prefs.png )
 
  - Open the Boards Manager `Tools > Board > Boards Manager...`:
  
- ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_manager_select.png)
+ ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_manager_select.png)
 
  - Scroll down to `esp8266 by ESP8266 Community` and select varsion 2.2.0 then click install:
  
- ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_manager.png)
+ ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_manager.png)
 
  - Select the NodeMCU 1.0 board from `Tools > Board menu` and select `NodeMCU 1.0 (ESP-12E Module)`:
  
- ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_selected.png)
+ ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_selected.png)
 
 - Install the denbit library 
  - [Download the latest release of this repo](https://github.com/theapi/denbit/releases)
@@ -33,13 +33,16 @@ Training wheels for the NodeMCU
 - Load the Blink "sketch"
  - `File -> Examples -> Denbit -> Basics -> Blink`
  - Compile the software: click the tick in the top left of the Arduino application... wait while it compiles...
+ 
+![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/compiling.png) 
+ 
  - Upload the software: click the arrow in the top left of the Arduino application... wait while it uploads
  
-![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/uploading.png)
+![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/uploading.png)
 
   - The center led will be blue while it uploads. 
 
-![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/done_uploading.png) 
+![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/done_uploading.png) 
 
   - When the Arduino window says *"Done uploading"* the green light will blink on & off
  - Change the Blink sketch so that `delay(1000)` is `delay(500)`, then compile & upload again. The green LED will now blink twice as fast
