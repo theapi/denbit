@@ -12,6 +12,7 @@
 	 - connect one of the outer pins of the potentiometer to the 3V3 (power)
 	 - connect the other outer pin of the potentiometer to the GND (ground)
 
+   An image & more info on the setup is at https://github.com/theapi/denbit/blob/master/docs/examples/Basics/Knob.md
 */
 
 // Include the Denbit library.
