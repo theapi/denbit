@@ -1,7 +1,7 @@
 # Denbit
 Training wheels for the nodemcu
 -------------------------------------------------------------
-![image](https://raw.githubusercontent.com/theapi/denbit/master/kicad/basic/basic.png)
+![image](https://raw.githubusercontent.com/theapi/denbit/master/kicad/basic/denbit_front.png)
 
 ##Installation
 - Mac users need to install the driver from [www.silabs.com][1] ([direct link][2]).
@@ -12,7 +12,8 @@ Training wheels for the nodemcu
  - Install Arduino 1.6.9 from the Arduino website.
  - Start Arduino and open Preferences window.
  - Enter http://arduino.esp8266.com/stable/package_esp8266com_index.json into Additional Board Manager URLs field.
- - Open Boards Manager from `Tools > Board menu` and select `NodeMCU 1.0 (ESP-12E Module)`.
+ - Open Boards Manager, scroll down to `esp8266 by ESP8266 Community` and select varsion 2.2.0 then click install. 
+ - Select the NodeMCU 1.0 board from `Tools > Board menu` and select `NodeMCU 1.0 (ESP-12E Module)`.
 - Install the denbit library 
  - [Download the latest release of this repo](https://github.com/theapi/denbit/releases)
  - `Sketch -> Include Library -> Add .ZIP Library...` then select the file downloaded in the step above.
