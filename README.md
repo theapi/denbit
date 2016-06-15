@@ -12,13 +12,21 @@ Training wheels for the NodeMCU
  - Install Arduino 1.6.9 from the Arduino website.
  - Start Arduino and open Preferences window.
  - Enter http://arduino.esp8266.com/stable/package_esp8266com_index.json into Additional Board Manager URLs field:
+ 
  ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/prefs.png )
+
  - Open the Boards Manager:
+ 
  ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_manager_select.png)
+
  - Scroll down to `esp8266 by ESP8266 Community` and select varsion 2.2.0 then click install:
+ 
  ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_manager.png)
+
  - Select the NodeMCU 1.0 board from `Tools > Board menu` and select `NodeMCU 1.0 (ESP-12E Module)`:
+ 
  ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_selected.png)
+
 - Install the denbit library 
  - [Download the latest release of this repo](https://github.com/theapi/denbit/releases)
  - `Sketch -> Include Library -> Add .ZIP Library...` then select the file downloaded in the step above.
@@ -32,7 +40,7 @@ Training wheels for the NodeMCU
  - Change the Blink sketch so that `delay(1000)` is `delay(500)`, then compile & upload again. The green LED will now blink twice as fast
  
  
-## Play with the Denbit "Basic" examples
+## Play with the Denbit `Basic` examples
 - [Fade](docs/examples/Basics/Fade.md)
 - [DigitalReadSerial](docs/examples/Basics/DigitalReadSerial.md)
 - [AnalogReadSerial](docs/examples/Basics/AnalogReadSerial.md)
