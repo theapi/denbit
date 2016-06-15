@@ -14,6 +14,7 @@ Training wheels for the NodeMCU
  - Enter http://arduino.esp8266.com/stable/package_esp8266com_index.json into Additional Board Manager URLs field:
  ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/prefs.png )
  - Open the Boards Manager:
+ 
  ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_manager_select.png)
  - Scroll down to `esp8266 by ESP8266 Community` and select varsion 2.2.0 then click install:
  ![image](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_manager.png)
