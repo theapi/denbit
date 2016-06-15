@@ -29,6 +29,9 @@ Training wheels for the NodeMCU
 - Install the denbit library 
  - [Download the latest release of this repo](https://github.com/theapi/denbit/releases)
  - `Sketch -> Include Library -> Add .ZIP Library...` then select the file downloaded in the step above.
+
+ 
+## Make it do something...
 - Connect the denbit to the usb port of the computer.
 - Load the Blink "sketch"
  - `File -> Examples -> Denbit -> Basics -> Blink`
