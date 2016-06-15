@@ -56,7 +56,7 @@ Training wheels for the NodeMCU
  - Change the Blink sketch so that `delay(1000)` is `delay(500)`, then compile & upload again. The green LED will now blink twice as fast
  
  
-## Play with the Denbit `Basic` examples
+## Play with the Denbit Basic examples
 - [Fade](docs/examples/Basics/Fade.md)
 - [DigitalReadSerial](docs/examples/Basics/DigitalReadSerial.md)
 - [AnalogReadSerial](docs/examples/Basics/AnalogReadSerial.md)
