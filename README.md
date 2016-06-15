@@ -48,7 +48,7 @@ Training wheels for the NodeMCU
  
   ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/uploading.png)
 
-  - The center led will be blue while it uploads. 
+  - The center light will be blue while it uploads. 
 
   ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/done_uploading.png) 
 
