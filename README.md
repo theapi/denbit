@@ -33,12 +33,12 @@ Training wheels for the NodeMCU
 - Load the Blink "sketch"
  - `File -> Examples -> Denbit -> Basics -> Blink`
  - Compile (verify) the software: click the tick in the top left of the Arduino application... 
- - 
+ 
  ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/compile.png)
 
  - wait while it compiles...
  
-![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/compiling.png) 
+ ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/compiling.png) 
  
  - Upload the software: click the arrow in the top left of the Arduino application:
  
