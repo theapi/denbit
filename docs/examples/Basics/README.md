@@ -6,5 +6,3 @@
 3. [AnalogReadSerial](AnalogReadSerial.md): Monitor the variable voltag of a sensor over a serial communication.
 4. [Denbit](Denbit.md): Use a library to initialise the Denbit.
 5. [Knob](Knob.md): Use a potentiometer.
-6. [Temperature](Temperature.md): Measure temperature.
-7. [Knock](Knock.md): Detect a knock.
