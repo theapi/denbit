@@ -65,8 +65,10 @@ Training wheels for the NodeMCU
 - [AnalogReadSerial](docs/examples/Basics/AnalogReadSerial.md)
 - [Denbit](docs/examples/Basics/Denbit.md)
 - [Knob](docs/examples/Basics/Knob.md)
-- [Temperature](docs/examples/Basics/Temperature.md)
-- [Knock](docs/examples/Basics/Knock.md)
+
+## Then use some sensors
+- [Temperature](docs/examples/Sensors/Temperature.md)
+- [Knock](docs/examples/Sensors/Knock.md)
 
 [1]:https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx
 [2]:https://www.silabs.com/Support%20Documents/Software/Mac_OSX_VCP_Driver.zip
