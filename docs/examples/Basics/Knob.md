@@ -14,7 +14,7 @@ between your Denbit and your computer over USB.
 Click the magnifiying class icon in the top right of the Arduino application.
   
 The serial monitor needs to be listening at "115200 baud", 
-so set the value in the bottom left to 115200 baud.
+so set the value in the baud selector to `115200 baud`.
 
 If the wrong value is set, only gibberish will appear on the monitor. 
 
