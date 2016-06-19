@@ -7,7 +7,7 @@ Training wheels for the NodeMCU
 - Mac users need to install the driver from [www.silabs.com][1] ([direct link][2]).
 
 - Download and install the [Aduino IDE](https://www.arduino.cc/en/Main/Software) plus any drivers it asks to. 
-- You can use the free version with the `JUST DOWNLOAD` link. No need to donate money.
+ You can use the free version with the `JUST DOWNLOAD` link. No need to donate money.
 
 - Install the NodeMCU "board" into the Arduino IDE:
  - Start Arduino and open Preferences window.
