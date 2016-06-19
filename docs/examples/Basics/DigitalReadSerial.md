@@ -17,6 +17,9 @@ so set the value in the baud selector to `115200 baud`.
 
 If the wrong value is set, only gibberish will appear on the monitor. 
 
+### Click the left button on the Denbit 
+- while watching the 1's change to 0's on the serial monitor
+
 ### Why?
 This demonstrates a basic way to communicate to other systems. Handy for many things like:
 - Debugging
