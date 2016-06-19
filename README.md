@@ -30,7 +30,7 @@ Training wheels for the NodeMCU
  ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_selected.png)
 
 - Install the denbit library 
- - [Download the latest release of this repo](https://github.com/theapi/denbit/releases)
+ - [Download the latest release of this repo](https://github.com/theapi/denbit/archive/v1.0.4.zip)
  - `Sketch -> Include Library -> Add .ZIP Library...` then select the file downloaded in the step above.
 
 
