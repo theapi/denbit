@@ -9,6 +9,8 @@ Training wheels for the NodeMCU
 - Download and install the [Aduino IDE](https://www.arduino.cc/en/Main/Software) plus any drivers it asks to. 
  You can use the free version with the `JUST DOWNLOAD` link. No need to donate money.
 
+- Open the Arduino application.
+
 - Install the NodeMCU "board" into the Arduino IDE:
  - Start Arduino and open Preferences window.
  - Enter http://arduino.esp8266.com/stable/package_esp8266com_index.json into Additional Board Manager URLs field:
