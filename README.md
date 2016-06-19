@@ -19,9 +19,11 @@ Training wheels for the NodeMCU
  
  ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_manager_select.png)
 
- - Scroll down to `esp8266 by ESP8266 Community`, click `More info` and select varsion 2.2.0 then click install:
+ - Scroll down to `esp8266 by ESP8266 Community`, click `More info` and select version 2.2.0 then click install:
  
  ![](https://raw.githubusercontent.com/theapi/denbit/master/docs/img/board_manager.png)
+
+ - Click `Close` once it installed
 
  - Select the NodeMCU 1.0 board from `Tools > Board menu` and select `NodeMCU 1.0 (ESP-12E Module)`:
  
