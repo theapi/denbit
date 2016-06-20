@@ -37,8 +37,8 @@ Training wheels for the NodeMCU
 ## Make it do something...
 - Connect the denbit to the usb port of the computer.
 - Select the `Port` the usb is connected to
+ - On a Mac it will be `/dev/cu.SLAB_USBtoUART` 
  - On Windows it will be `COMM` and a number so something like `COMM4`
- - On a Mac it will be `...`
 - Load the Blink "sketch"
  - `File -> Examples -> Denbit -> Basics -> Blink`
  - Compile (verify) the software: click the tick in the top left of the Arduino application... 
