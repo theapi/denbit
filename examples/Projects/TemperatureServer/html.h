@@ -20,7 +20,7 @@ connection.onmessage = function (e) {
 </script>
 </head>
 <body>
-Temperature: <input id="temperature" type="text" value="" />
+<input id="temperature" type="text" value="" />
 </body>
 </html>
 

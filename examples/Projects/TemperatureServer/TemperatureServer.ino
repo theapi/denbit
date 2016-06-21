@@ -1,5 +1,5 @@
 /*
-   Servo WebSocketServer
+   Temperature Server
 
    Install the library from https://github.com/Links2004/arduinoWebSockets
 */
@@ -37,7 +37,7 @@ const char* password = WIFI_PASS;
 
 // Generally, you should use "unsigned long" for variables that hold time
 // The value will quickly become too large for an int to store
-unsigned long previousMillis = 0;        // will store last time LED was updated
+unsigned long previousMillis = 0;        // will store last time the temperature was updated
 
 // How long to wait before temperature readings.
 const long interval = 1000;
@@ -46,7 +46,7 @@ const long interval = 1000;
 ESP8266WebServer server = ESP8266WebServer(80);
 WebSocketsServer webSocket = WebSocketsServer(81);
 
-void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t lenght) {
+void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length) {
 
   switch (type) {
     case WStype_DISCONNECTED:
@@ -60,7 +60,6 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t lenght
         webSocket.sendTXT(num, "Connected");
       }
       break;
-
   }
 
 }
@@ -70,7 +69,7 @@ void setup() {
   //Serial.setDebugOutput(true);
 
   WiFi.begin(ssid, password);
-  Serial.println();
+  Serial.println("Connecting");
 
   // Wait for connection
   while (WiFi.status() != WL_CONNECTED) {
@@ -94,11 +93,6 @@ void setup() {
   });
 
   server.begin();
-
-  digitalWrite(ledRed, 0);
-  digitalWrite(ledGreen, 0);
-  digitalWrite(ledBlue, 0);
-
 }
 
 /**
@@ -126,6 +120,7 @@ void loop() {
     double temperature = thermistor(analogRead(A0));
     // Convert the number to a string to 1 decimal place.
     String str = String(temperature, 1);
+    str += "°C";
     webSocket.broadcastTXT(str);
 
     if (temperature > 25) {
