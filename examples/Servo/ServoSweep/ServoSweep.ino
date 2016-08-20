@@ -13,12 +13,12 @@ Denbit denbit;
 
 
 Servo myservo;  // create servo object to control a servo
-// twelve servo objects can be created on most boards
+// more than one servo objects can be created
 
 int pos = 0;    // variable to store the servo position
 
 void setup() {
-  myservo.attach(12);  // attaches the servo to the output pin
+  myservo.attach(4);  // attaches the servo to the output pin
 }
 
 void loop() {
