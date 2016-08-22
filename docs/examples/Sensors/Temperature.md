@@ -1,6 +1,6 @@
 # Temperature
 
-This example moves a servo back & forth. 
+Meassures the temperature and changes the RGB led as appropriate. 
 
 Connect the parts as shown in the image:
 - GND to one end of a 10K resistor(Brown - Black - Orange - Gold)
