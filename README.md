@@ -72,6 +72,10 @@ Training wheels for the NodeMCU
 - [Denbit](docs/examples/Basics/Denbit.md)
 - [Knob](docs/examples/Basics/Knob.md)
 
+## Play with servos
+- [ServoSweep](docs/examples/Servo/ServoSweep.md)
+- [ServoKnob](docs/examples/Servo/ServoKnob.md)
+
 ## Then use some sensors
 - [Temperature](docs/examples/Sensors/Temperature.md)
 - [Knock](docs/examples/Sensors/Knock.md)
