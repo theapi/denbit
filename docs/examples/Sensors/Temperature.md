@@ -2,7 +2,7 @@
 
 This example moves a servo back & forth. 
 
-Connect the parts as shown in the image.
+Connect the parts as shown in the image:
 - GND to one end of a 10K resistor(Brown - Black - Orange - Gold)
 - One leg of the thermistor (temperature sensor) to the other end of the resistor
 - 3V3 to the other leg of the thermistor
