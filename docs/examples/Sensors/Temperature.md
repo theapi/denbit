@@ -8,9 +8,8 @@ Connect the parts as shown in the image.
 - 3V3 to the other leg of the thermistor
 - A0 to the point where the thermistor & resitor are connected
 
-  (GND) ---- (10k-Resistor) -------|------- (Thermistor) ---- (3V3)|
+  (GND) ---- (10k-Resistor) ------- (Analog Pin A0) ------- (Thermistor) ---- (3V3)
 
-                               Analog Pin A0
 
 ![image](img/temperature_bb.png)
 
