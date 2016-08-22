@@ -2,7 +2,9 @@
 
 Knock Sensor
    This sketch reads a piezo element to detect a knocking sound.
+   
    It reads an analog pin and compares the result to a set threshold.
+   
    If the result is greater than the threshold, it writes
    "knock" to the serial port, and toggles the LED on pin 13.
    
