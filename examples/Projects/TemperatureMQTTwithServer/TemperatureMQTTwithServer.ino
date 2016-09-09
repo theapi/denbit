@@ -77,6 +77,13 @@ void setup() {
   Serial.begin(115200);
   //Serial.setDebugOutput(true);
 
+    // Ensure that previous wifi settings are removed 
+  WiFi.disconnect();
+  WiFi.softAPdisconnect(true);
+
+  // "Station" mode
+  WiFi.mode(WIFI_STA);
+
   WiFi.begin(ssid, password);
   Serial.println("Connecting");
 
