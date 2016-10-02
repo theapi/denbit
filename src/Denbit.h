@@ -2,6 +2,8 @@
 #define DENBIT_H
 
 #include "Arduino.h"
+#include "ArduinoOTA.h"
+#include "ESP8266WiFi.h"
 
 #define DENBIT_GREEN     13 // D7
 #define DENBIT_RED       12 // D6
@@ -15,6 +17,19 @@ class Denbit
 {
   public:
     Denbit();
+
+    // Let this library control All the OTA setup.
+    void OTAsetup(const char *ssid, const char *password, const char *hostname);
+
+    // Alias for ArduinoOTA.handle();
+    void OTAloop();
+
+    // Initialise the progress & error handlers for OTA
+    void OTAinit(const char *hostname);
+
+    // Turn off the RGB led.
+    void RGBoff();
+
   private:
     int _mode;
 };
