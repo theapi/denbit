@@ -9,11 +9,6 @@
 Denbit denbit;
 
 
-const char* name = "Bob";
-const char* ssid = "....";
-const char* password = ".....";
-
-
 // Assign readable names to the RGB LED pin numbers
 const int rgbRed   = 15;
 const int rgbGreen = 14;

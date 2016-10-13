@@ -4,7 +4,8 @@ Training wheels for the NodeMCU
 ![image](https://raw.githubusercontent.com/theapi/denbit/master/kicad/basic/denbit_front.png)
 
 ##Installation
-- Mac users need to install the driver from [www.silabs.com][1] ([direct link][2]).
+
+
 
 - Download and install the [Aduino IDE](https://www.arduino.cc/en/Main/Software) plus any drivers it asks too. 
  You can use the free version with the `JUST DOWNLOAD` link. No need to donate money.
@@ -32,7 +33,11 @@ Training wheels for the NodeMCU
 - Install the denbit library 
  - [Download the latest release of this repo](https://github.com/theapi/denbit/archive/v1.0.6.zip)
  - `Sketch -> Include Library -> Add .ZIP Library...` then select the file downloaded in the step above.
+ 
+- Rename ~/Documents/Arduino/libraries/denbit/src/default_config.h to config.h
+and edit its content to have the wifi access details and your denbit's name.
 
+- Mac users, if programming with a usb cable, install the driver from [www.silabs.com][1] ([direct link][2]).
 
 ## Make it do something...
 - Connect the denbit to the usb port of the computer.

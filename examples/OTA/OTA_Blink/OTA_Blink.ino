@@ -4,22 +4,10 @@
  *  controlled by the Denbit library.
  */
 
-
 // Include the Denbit library.
 #include <Denbit.h>
 // Initialize the denbit.
 Denbit denbit;
-
-
-const char* name = "Bob";
-const char* ssid = "......";
-const char* password = "......";
-
-
-// Assign readable names to the RGB LED pin numbers
-const int rgbRed   = 15;
-const int rgbGreen = 14;
-const int rgbBlue  = 10;
 
 
 // Variables will change :
@@ -35,7 +23,7 @@ const long interval = 1000;           // interval at which to blink (millisecond
 
 void setup() {
   // Start the Over The Air programming.
-  denbit.OTAsetup(ssid, password, name);
+  denbit.OTAsetup();
 }
 
 void loop() {
@@ -61,8 +49,9 @@ void loop() {
       ledState = LOW;
     }
 
-    // set the LED with the ledState of the variable:
-    digitalWrite(rgbGreen, ledState);
+    // set the green LED (labeled 14 on the board) 
+    // with the ledState of the variable:
+    digitalWrite(14, ledState);
   }
 }
 

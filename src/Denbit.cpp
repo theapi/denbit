@@ -1,5 +1,6 @@
 #include "Arduino.h"
 #include "Denbit.h"
+#include "config.h"
 
 Denbit::Denbit()
 {
@@ -38,11 +39,11 @@ void Denbit::RGBoff() {
 /**
  * Let this library control All the OTA setup.
  */
-void Denbit::OTAsetup(const char *ssid, const char *password, const char *hostname) {
+void Denbit::OTAsetup() { 
 
-  // Firs connect to the WiFi network.
+  // First connect to the WiFi network.
   WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid, password);
+  WiFi.begin(denbit_wifi_ssid, denbit_wifi_password);
   while (WiFi.waitForConnectResult() != WL_CONNECTED) {
     // Show the connection failure with a red led.
     digitalWrite(DENBIT_RGB_RED, HIGH);
@@ -51,8 +52,8 @@ void Denbit::OTAsetup(const char *ssid, const char *password, const char *hostna
     ESP.restart();
   }
 
-  // Now setup OTA.
-  ArduinoOTA.setHostname(hostname);
+  // denbit_name comes from config.h
+  ArduinoOTA.setHostname(denbit_name);
 
   ArduinoOTA.onProgress([](unsigned int progress, unsigned int total) {
     // Flash the RGB led.
@@ -96,8 +97,8 @@ void Denbit::OTAsetup(const char *ssid, const char *password, const char *hostna
 /**
  * Setup and initialise OTA.
  */
-void Denbit::OTAinit(const char *hostname) {
-  ArduinoOTA.setHostname(hostname);
+void Denbit::OTAinit() {
+  ArduinoOTA.setHostname(denbit_name);
 
   ArduinoOTA.onProgress([](unsigned int progress, unsigned int total) {
     // Flash the RGB led.

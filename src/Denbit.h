@@ -19,13 +19,13 @@ class Denbit
     Denbit();
 
     // Let this library control All the OTA setup.
-    void OTAsetup(const char *ssid, const char *password, const char *hostname);
+    void OTAsetup();
 
     // Alias for ArduinoOTA.handle();
     void OTAloop();
 
     // Initialise the progress & error handlers for OTA
-    void OTAinit(const char *hostname);
+    void OTAinit();
 
     // Turn off the RGB led.
     void RGBoff();

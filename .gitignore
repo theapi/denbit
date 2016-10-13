@@ -1,4 +1,6 @@
 
+src/config.h
+
 examples/ServoWebsocket/wifi_config.h
 
 .DS_Store
