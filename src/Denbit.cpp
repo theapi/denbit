@@ -118,7 +118,7 @@ void Denbit::OTAinit() {
 /**
  * Alias for ArduinoOTA.handle();
  */
-void Denbit::OTAloop() {
+void Denbit::OTAhandle() {
   ArduinoOTA.handle();
 }
 

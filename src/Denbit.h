@@ -22,7 +22,7 @@ class Denbit
     void OTAsetup();
 
     // Alias for ArduinoOTA.handle();
-    void OTAloop();
+    void OTAhandle();
 
     // Initialise the progress & error handlers for OTA
     void OTAinit();

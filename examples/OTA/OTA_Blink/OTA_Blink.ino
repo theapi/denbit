@@ -28,7 +28,7 @@ void setup() {
 
 void loop() {
   // Check for any Over The Air updates.
-  denbit.OTAloop();
+  denbit.OTAhandle();
 
   // Blink without delay...
 
