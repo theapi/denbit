@@ -46,11 +46,12 @@ void Denbit::OTAsetup() {
   WiFi.begin(denbit_wifi_ssid, denbit_wifi_password);
   while (WiFi.waitForConnectResult() != WL_CONNECTED) {
     // Show the connection failure with a red led.
-    digitalWrite(DENBIT_RGB_RED, HIGH);
-    delay(1000);
+    digitalWrite(DENBIT_RED, HIGH);
+    delay(500);
     // Try again...
-    ESP.restart();
+    //ESP.restart();
   }
+  digitalWrite(DENBIT_RED, LOW);
 
   // denbit_name comes from config.h
   if (strcmp(denbit_name, "xxx") == 0) {
