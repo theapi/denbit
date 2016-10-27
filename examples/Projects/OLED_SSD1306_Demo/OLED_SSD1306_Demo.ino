@@ -1,33 +1,46 @@
-/**The MIT License (MIT)
-
-Copyright (c) 2015 by Daniel Eichhorn
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-See more at http://blog.squix.ch
-*/
-// Install the SSD1306 library from https://github.com/squix78/esp8266-oled-ssd1306
+/**
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2016 by Daniel Eichhorn
+ * Copyright (c) 2016 by Fabrice Weinberg
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+ */
 
 #include <Wire.h>
-#include <SPI.h>
-#include "SSD1306.h"
-#include "SSD1306Ui.h"
+
+// Include the correct display library
+// For a connection via I2C using Wire include
+#include <Wire.h>  // Only needed for Arduino 1.6.5 and earlier
+#include "SSD1306.h" // alias for `#include "SSD1306Wire.h"`
+// For a connection via I2C using brzo_i2c (must be installed) include
+// #include <brzo_i2c.h> // Only needed for Arduino 1.6.5 and earlier
+// #include "SSD1306Brzo.h"
+// For a connection via SPI include
+// #include <SPI.h> // Only needed for Arduino 1.6.5 and earlier
+// #include "SSD1306Spi.h"
+
+// Include the UI lib
+#include "OLEDDisplayUi.h"
+
+// Include custom images
 #include "images.h"
 
 // Include the Denbit library.
@@ -36,51 +49,26 @@ See more at http://blog.squix.ch
 Denbit denbit;
 
 
-// Pin definitions for I2C
-#define OLED_SDA    4  
-#define OLED_SDC    5  
-#define OLED_ADDR   0x3C
+// Initialize the OLED display using Wire library
+SSD1306  display(0x3c, 4, 5); // I2C
 
-/* Hardware Wemos D1 mini SPI pins
- D5 GPIO14   CLK         - D0 pin OLED display
- D6 GPIO12   MISO (DIN)  - not connected
- D7 GPIO13   MOSI (DOUT) - D1 pin OLED display
- D8 GPIO15   CS / SS     - CS pin OLED display
- D0 GPIO16   RST         - RST pin OLED display
- D2 GPIO4    DC          - DC pin OLED
-*/
+OLEDDisplayUi ui     ( &display );
 
-// Pin definitions for SPI
-#define OLED_RESET  D0  // RESET
-#define OLED_DC     D2  // Data/Command
-#define OLED_CS     D8  // Chip select
-
-// Uncomment one of the following based on OLED type
-// SSD1306 display(true, OLED_RESET, OLED_DC, OLED_CS); // FOR SPI
-SSD1306   display(OLED_ADDR, OLED_SDA, OLED_SDC);    // For I2C
-SSD1306Ui ui     ( &display );
-
-
-
-bool msOverlay(SSD1306 *display, SSD1306UiState* state) {
+void msOverlay(OLEDDisplay *display, OLEDDisplayUiState* state) {
   display->setTextAlignment(TEXT_ALIGN_RIGHT);
   display->setFont(ArialMT_Plain_10);
   display->drawString(128, 0, String(millis()));
-  return true;
 }
 
-bool drawFrame1(SSD1306 *display, SSD1306UiState* state, int x, int y) {
+void drawFrame1(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
   // draw an xbm image.
   // Please note that everything that should be transitioned
   // needs to be drawn relative to x and y
 
-  // if this frame need to be refreshed at the targetFPS you need to
-  // return true
   display->drawXbm(x + 34, y + 14, dennis_logo_width, dennis_logo_height, dennis_logo_bits);
-  return false;
 }
 
-bool drawFrame2(SSD1306 *display, SSD1306UiState* state, int x, int y) {
+void drawFrame2(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
   // Demonstrates the 3 included default sizes. The fonts come from SSD1306Fonts.h file
   // Besides the default fonts there will be a program to convert TrueType fonts into this format
   display->setTextAlignment(TEXT_ALIGN_LEFT);
@@ -92,11 +80,9 @@ bool drawFrame2(SSD1306 *display, SSD1306UiState* state, int x, int y) {
 
   display->setFont(ArialMT_Plain_24);
   display->drawString(0 + x, 34 + y, "Arial 24");
-
-  return false;
 }
 
-bool drawFrame3(SSD1306 *display, SSD1306UiState* state, int x, int y) {
+void drawFrame3(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
   // Text alignment demo
   display->setFont(ArialMT_Plain_10);
 
@@ -106,32 +92,35 @@ bool drawFrame3(SSD1306 *display, SSD1306UiState* state, int x, int y) {
 
   // The coordinates define the center of the text
   display->setTextAlignment(TEXT_ALIGN_CENTER);
-  display->drawString(64 + x, 22, "Center aligned (64,22)");
+  display->drawString(64 + x, 22 + y, "Center aligned (64,22)");
 
   // The coordinates define the right end of the text
   display->setTextAlignment(TEXT_ALIGN_RIGHT);
-  display->drawString(128 + x, 33, "Right aligned (128,33)");
-  return false;
+  display->drawString(128 + x, 33 + y, "Right aligned (128,33)");
 }
 
-bool drawFrame4(SSD1306 *display, SSD1306UiState* state, int x, int y) {
+void drawFrame4(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
   // Demo for drawStringMaxWidth:
   // with the third parameter you can define the width after which words will be wrapped.
   // Currently only spaces and "-" are allowed for wrapping
   display->setTextAlignment(TEXT_ALIGN_LEFT);
   display->setFont(ArialMT_Plain_10);
-  display->drawStringMaxWidth(0 + x, 10 + y, 128, "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.");
-  return false;
+  display->drawStringMaxWidth(0 + x, 10 + y, 128, "Lorem ipsum\n dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.");
 }
 
-// this array keeps function pointers to all frames
-// frames are the single views that slide from right to left
-bool (*frames[])(SSD1306 *display, SSD1306UiState* state, int x, int y) = { drawFrame1, drawFrame2, drawFrame3, drawFrame4 };
+void drawFrame5(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
+  display->drawXbm(x + 34, y + 14, dennis_logo_width, dennis_logo_height, dennis_logo_bits);
+}
+
+// This array keeps function pointers to all frames
+// frames are the single views that slide in
+FrameCallback frames[] = { drawFrame1, drawFrame2, drawFrame3, drawFrame4, drawFrame5 };
 
 // how many frames are there?
-int frameCount = 4;
+int frameCount = 5;
 
-bool (*overlays[])(SSD1306 *display, SSD1306UiState* state)             = { msOverlay };
+// Overlays are statically drawn on top of a frame eg. a clock
+OverlayCallback overlays[] = { msOverlay };
 int overlaysCount = 1;
 
 void setup() {
@@ -139,11 +128,14 @@ void setup() {
   Serial.println();
   Serial.println();
 
+	// The ESP is capable of rendering 60fps in 80Mhz mode
+	// but that won't give you much time for anything else
+	// run it in 160Mhz mode or just set it to 30 fps
+  ui.setTargetFPS(10);
 
-  ui.setTargetFPS(30);
-
-  ui.setActiveSymbole(activeSymbole);
-  ui.setInactiveSymbole(inactiveSymbole);
+	// Customize the active and inactive symbol
+  ui.setActiveSymbol(activeSymbol);
+  ui.setInactiveSymbol(inactiveSymbol);
 
   // You can change this to
   // TOP, LEFT, BOTTOM, RIGHT
@@ -153,21 +145,22 @@ void setup() {
   ui.setIndicatorDirection(LEFT_RIGHT);
 
   // You can change the transition that is used
-  // SLIDE_LEFT, SLIDE_RIGHT, SLIDE_TOP, SLIDE_DOWN
+  // SLIDE_LEFT, SLIDE_RIGHT, SLIDE_UP, SLIDE_DOWN
   ui.setFrameAnimation(SLIDE_LEFT);
 
   // Add frames
   ui.setFrames(frames, frameCount);
 
   // Add overlays
-  ui.setOverlays(overlays, overlaysCount);
+  //ui.setOverlays(overlays, overlaysCount);
 
-  // Inital UI takes care of initalising the display too.
+  // Initialising the UI will init the display too.
   ui.init();
 
   display.flipScreenVertically();
 
 }
+
 
 void loop() {
   int remainingTimeBudget = ui.update();
@@ -179,4 +172,3 @@ void loop() {
     delay(remainingTimeBudget);
   }
 }
-
